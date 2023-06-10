@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */; };
+		1CB876CB2A34D3F1008B6F3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876CA2A34D3F1008B6F3E /* ContentView.swift */; };
+		1CB876CD2A34D3F4008B6F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */; };
+		1CB876D02A34D3F4008B6F3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */; };
+		1CB876DA2A34D3F4008B6F3E /* FTNTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876D92A34D3F4008B6F3E /* FTNTTests.swift */; };
+		1CB876E42A34D3F4008B6F3E /* FTNTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876E32A34D3F4008B6F3E /* FTNTUITests.swift */; };
+		1CB876E62A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876E52A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CB876D62A34D3F4008B6F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CB876BD2A34D3F1008B6F3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CB876C42A34D3F1008B6F3E;
+			remoteInfo = FTNT;
+		};
+		1CB876E02A34D3F4008B6F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CB876BD2A34D3F1008B6F3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CB876C42A34D3F1008B6F3E;
+			remoteInfo = FTNT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CB876C52A34D3F1008B6F3E /* FTNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTApp.swift; sourceTree = "<group>"; };
+		1CB876CA2A34D3F1008B6F3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CB876D52A34D3F4008B6F3E /* FTNTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTNTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB876D92A34D3F4008B6F3E /* FTNTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTTests.swift; sourceTree = "<group>"; };
+		1CB876DF2A34D3F4008B6F3E /* FTNTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTNTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB876E32A34D3F4008B6F3E /* FTNTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTUITests.swift; sourceTree = "<group>"; };
+		1CB876E52A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CB876C22A34D3F1008B6F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876D22A34D3F4008B6F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876DC2A34D3F4008B6F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB876BC2A34D3F1008B6F3E = {
+			isa = PBXGroup;
+			children = (
+				1CB876C72A34D3F1008B6F3E /* FTNT */,
+				1CB876D82A34D3F4008B6F3E /* FTNTTests */,
+				1CB876E22A34D3F4008B6F3E /* FTNTUITests */,
+				1CB876C62A34D3F1008B6F3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CB876C62A34D3F1008B6F3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CB876C52A34D3F1008B6F3E /* FTNT.app */,
+				1CB876D52A34D3F4008B6F3E /* FTNTTests.xctest */,
+				1CB876DF2A34D3F4008B6F3E /* FTNTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CB876C72A34D3F1008B6F3E /* FTNT */ = {
+			isa = PBXGroup;
+			children = (
+				1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */,
+				1CB876CA2A34D3F1008B6F3E /* ContentView.swift */,
+				1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */,
+				1CB876CE2A34D3F4008B6F3E /* Preview Content */,
+			);
+			path = FTNT;
+			sourceTree = "<group>";
+		};
+		1CB876CE2A34D3F4008B6F3E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1CB876D82A34D3F4008B6F3E /* FTNTTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CB876D92A34D3F4008B6F3E /* FTNTTests.swift */,
+			);
+			path = FTNTTests;
+			sourceTree = "<group>";
+		};
+		1CB876E22A34D3F4008B6F3E /* FTNTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1CB876E32A34D3F4008B6F3E /* FTNTUITests.swift */,
+				1CB876E52A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift */,
+			);
+			path = FTNTUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CB876C42A34D3F1008B6F3E /* FTNT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB876E92A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNT" */;
+			buildPhases = (
+				1CB876C12A34D3F1008B6F3E /* Sources */,
+				1CB876C22A34D3F1008B6F3E /* Frameworks */,
+				1CB876C32A34D3F1008B6F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTNT;
+			productName = FTNT;
+			productReference = 1CB876C52A34D3F1008B6F3E /* FTNT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CB876D42A34D3F4008B6F3E /* FTNTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB876EC2A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNTTests" */;
+			buildPhases = (
+				1CB876D12A34D3F4008B6F3E /* Sources */,
+				1CB876D22A34D3F4008B6F3E /* Frameworks */,
+				1CB876D32A34D3F4008B6F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CB876D72A34D3F4008B6F3E /* PBXTargetDependency */,
+			);
+			name = FTNTTests;
+			productName = FTNTTests;
+			productReference = 1CB876D52A34D3F4008B6F3E /* FTNTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1CB876DE2A34D3F4008B6F3E /* FTNTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB876EF2A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNTUITests" */;
+			buildPhases = (
+				1CB876DB2A34D3F4008B6F3E /* Sources */,
+				1CB876DC2A34D3F4008B6F3E /* Frameworks */,
+				1CB876DD2A34D3F4008B6F3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CB876E12A34D3F4008B6F3E /* PBXTargetDependency */,
+			);
+			name = FTNTUITests;
+			productName = FTNTUITests;
+			productReference = 1CB876DF2A34D3F4008B6F3E /* FTNTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CB876BD2A34D3F1008B6F3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1CB876C42A34D3F1008B6F3E = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					1CB876D42A34D3F4008B6F3E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 1CB876C42A34D3F1008B6F3E;
+					};
+					1CB876DE2A34D3F4008B6F3E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 1CB876C42A34D3F1008B6F3E;
+					};
+				};
+			};
+			buildConfigurationList = 1CB876C02A34D3F1008B6F3E /* Build configuration list for PBXProject "FTNT" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CB876BC2A34D3F1008B6F3E;
+			productRefGroup = 1CB876C62A34D3F1008B6F3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CB876C42A34D3F1008B6F3E /* FTNT */,
+				1CB876D42A34D3F4008B6F3E /* FTNTTests */,
+				1CB876DE2A34D3F4008B6F3E /* FTNTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CB876C32A34D3F1008B6F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB876D02A34D3F4008B6F3E /* Preview Assets.xcassets in Resources */,
+				1CB876CD2A34D3F4008B6F3E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876D32A34D3F4008B6F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876DD2A34D3F4008B6F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CB876C12A34D3F1008B6F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB876CB2A34D3F1008B6F3E /* ContentView.swift in Sources */,
+				1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876D12A34D3F4008B6F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB876DA2A34D3F4008B6F3E /* FTNTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB876DB2A34D3F4008B6F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB876E62A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift in Sources */,
+				1CB876E42A34D3F4008B6F3E /* FTNTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CB876D72A34D3F4008B6F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CB876C42A34D3F1008B6F3E /* FTNT */;
+			targetProxy = 1CB876D62A34D3F4008B6F3E /* PBXContainerItemProxy */;
+		};
+		1CB876E12A34D3F4008B6F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CB876C42A34D3F1008B6F3E /* FTNT */;
+			targetProxy = 1CB876E02A34D3F4008B6F3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CB876E72A34D3F4008B6F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CB876E82A34D3F4008B6F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CB876EA2A34D3F4008B6F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FTNT/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CB876EB2A34D3F4008B6F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FTNT/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1CB876ED2A34D3F4008B6F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTNT.app/FTNT";
+			};
+			name = Debug;
+		};
+		1CB876EE2A34D3F4008B6F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTNT.app/FTNT";
+			};
+			name = Release;
+		};
+		1CB876F02A34D3F4008B6F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FTNT;
+			};
+			name = Debug;
+		};
+		1CB876F12A34D3F4008B6F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FTNT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CB876C02A34D3F1008B6F3E /* Build configuration list for PBXProject "FTNT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB876E72A34D3F4008B6F3E /* Debug */,
+				1CB876E82A34D3F4008B6F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB876E92A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB876EA2A34D3F4008B6F3E /* Debug */,
+				1CB876EB2A34D3F4008B6F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB876EC2A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB876ED2A34D3F4008B6F3E /* Debug */,
+				1CB876EE2A34D3F4008B6F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB876EF2A34D3F4008B6F3E /* Build configuration list for PBXNativeTarget "FTNTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB876F02A34D3F4008B6F3E /* Debug */,
+				1CB876F12A34D3F4008B6F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CB876BD2A34D3F1008B6F3E /* Project object */;
+}
