@@ -23,6 +23,12 @@ struct ConsoleDetails: Identifiable{
 
 struct ConsoleList {
     //The consoles list but I'll only put one to save space
+    var categories: [String] {
+        ConsoleList.consoles.map { console in
+            console.category
+        }
+    }
+    
     static var consoles = [
         //Current Consoles
         ConsoleDetails(imgName: "NS_OG",

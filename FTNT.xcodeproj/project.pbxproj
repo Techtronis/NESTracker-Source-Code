@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C936CDB2A35E0460013F910 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C936CDA2A35E0460013F910 /* MainMenu.swift */; };
+		1C8EAC242A3629C600BA25C1 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EAC232A3629C600BA25C1 /* MainMenu.swift */; };
+		1C936CDB2A35E0460013F910 /* ConsoleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C936CDA2A35E0460013F910 /* ConsoleMenu.swift */; };
 		1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */; };
 		1CB876CD2A34D3F4008B6F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */; };
 		1CB876D02A34D3F4008B6F3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */; };
@@ -36,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C936CDA2A35E0460013F910 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		1C8EAC232A3629C600BA25C1 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		1C936CDA2A35E0460013F910 /* ConsoleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleMenu.swift; sourceTree = "<group>"; };
 		1CB876C52A34D3F1008B6F3E /* FTNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTApp.swift; sourceTree = "<group>"; };
 		1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,9 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				1CB876F42A34D448008B6F3E /* Consoles.swift */,
+				1C8EAC232A3629C600BA25C1 /* MainMenu.swift */,
 				1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */,
 				1CB876F62A34D72E008B6F3E /* ConsoleDetailView.swift */,
-				1C936CDA2A35E0460013F910 /* MainMenu.swift */,
+				1C936CDA2A35E0460013F910 /* ConsoleMenu.swift */,
 				1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */,
 				1CB876CE2A34D3F4008B6F3E /* Preview Content */,
 			);
@@ -263,7 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C936CDB2A35E0460013F910 /* MainMenu.swift in Sources */,
+				1C8EAC242A3629C600BA25C1 /* MainMenu.swift in Sources */,
+				1C936CDB2A35E0460013F910 /* ConsoleMenu.swift in Sources */,
 				1CB876F72A34D72E008B6F3E /* ConsoleDetailView.swift in Sources */,
 				1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */,
 				1CB876F52A34D448008B6F3E /* Consoles.swift in Sources */,
@@ -423,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2023.06.001;
 				DEVELOPMENT_ASSET_PATHS = "\"FTNT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -436,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -451,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2023.06.001;
 				DEVELOPMENT_ASSET_PATHS = "\"FTNT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -464,7 +468,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Techis.FTNT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

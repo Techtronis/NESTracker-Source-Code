@@ -9,18 +9,21 @@ import SwiftUI
 
 struct MainMenu: View {
     
-    var cons: [ConsoleDetails] = ConsoleList.consoles
+    var con = ConsoleList()
     
     var body: some View {
-        NavigationView(){
-            List(cons, id: \.id) { item in
-                NavigationLink(destination: ConsoleDetailView(con: item), label: {
-                    Text(item.consoleName)
-                }).navigationTitle("FTNT-1")
+        NavigationView{
+            List(con.categories, id:\.self) { category in
+                if(category.self == "Hybrid"){
+                    NavigationLink(destination: ConsoleMenu(), label: {
+                        Text("Hybrid")
+                    }).navigationTitle("FTNT")
+                }
             }
         }
     }
 }
+
 
 struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {

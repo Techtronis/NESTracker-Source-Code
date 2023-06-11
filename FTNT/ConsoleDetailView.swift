@@ -18,7 +18,7 @@ struct ConsoleDetailView: View {
                     Image(con.imgName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 150, height:150)
+                        .frame(width:140)
                     VStack(alignment: .leading){
                         Text(con.consoleName)
                             .fontWeight(.semibold)
