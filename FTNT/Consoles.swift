@@ -193,6 +193,21 @@ struct ConsoleList {
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
+        ConsoleDetails(imgName: "pkmnmini",
+                       consoleName: "Pokémon Mini",
+                       mostSoldGame: "Pokémon Party mini",
+                       initialPrice: "40",
+                       ReleaseDate: "December 14, 2001",
+                       Discontinuation: "2005",
+                       category: "Other",
+                       estimatedPricedToday: "$100-150 used depending on condition",
+                       cables: "1x AAA Battery Slot, 1x Game Card slot",
+                       processor: "4 MHz Epson S1C88",
+                       screenSize: "96 x 64 Monochrome LCD",
+                       favorites: false,
+                       discontinued: true,
+                       isHandheld: true),
+        
         //Old Home Consoles
         ConsoleDetails(imgName: "FAMICOM",
                        consoleName: "Famicom (Japan only)",
@@ -204,6 +219,11 @@ struct ConsoleList {
                        estimatedPricedToday: "$40-120 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Ricoh 2A03",
+                       dims:"""
+                       W: 5.6\"
+                        D: 9.1\"
+                        H: 3.1\"
+                       """,
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -279,7 +299,7 @@ struct ConsoleList {
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
-        ConsoleDetails(imgName: "TLNES",
+        ConsoleDetails(imgName: "topnes",
                        consoleName: "NES Top Loader",
                        mostSoldGame: "Super Mario Bros",
                        initialPrice: "49.99",

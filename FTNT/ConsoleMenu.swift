@@ -18,10 +18,11 @@ struct ConsoleMenu: View {
                     Image(item.imgName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 60)
+                        .frame(width: 60, height:60)
                     
                     Text(item.consoleName)
-                    .fontWeight(.semibold)                    }
+                        .fontWeight(.semibold)
+                }
             }).navigationTitle("FTNT-1")
         }
     }
