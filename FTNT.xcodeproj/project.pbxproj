@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C936CDB2A35E0460013F910 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C936CDA2A35E0460013F910 /* MainMenu.swift */; };
 		1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */; };
-		1CB876CB2A34D3F1008B6F3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876CA2A34D3F1008B6F3E /* ContentView.swift */; };
 		1CB876CD2A34D3F4008B6F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */; };
 		1CB876D02A34D3F4008B6F3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */; };
 		1CB876DA2A34D3F4008B6F3E /* FTNTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876D92A34D3F4008B6F3E /* FTNTTests.swift */; };
 		1CB876E42A34D3F4008B6F3E /* FTNTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876E32A34D3F4008B6F3E /* FTNTUITests.swift */; };
 		1CB876E62A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876E52A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift */; };
+		1CB876F52A34D448008B6F3E /* Consoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876F42A34D448008B6F3E /* Consoles.swift */; };
+		1CB876F72A34D72E008B6F3E /* ConsoleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB876F62A34D72E008B6F3E /* ConsoleDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C936CDA2A35E0460013F910 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		1CB876C52A34D3F1008B6F3E /* FTNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTApp.swift; sourceTree = "<group>"; };
-		1CB876CA2A34D3F1008B6F3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CB876CF2A34D3F4008B6F3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1CB876D52A34D3F4008B6F3E /* FTNTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTNTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		1CB876DF2A34D3F4008B6F3E /* FTNTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTNTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB876E32A34D3F4008B6F3E /* FTNTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTUITests.swift; sourceTree = "<group>"; };
 		1CB876E52A34D3F4008B6F3E /* FTNTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CB876F42A34D448008B6F3E /* Consoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consoles.swift; sourceTree = "<group>"; };
+		1CB876F62A34D72E008B6F3E /* ConsoleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		1CB876C72A34D3F1008B6F3E /* FTNT */ = {
 			isa = PBXGroup;
 			children = (
+				1CB876F42A34D448008B6F3E /* Consoles.swift */,
 				1CB876C82A34D3F1008B6F3E /* FTNTApp.swift */,
-				1CB876CA2A34D3F1008B6F3E /* ContentView.swift */,
+				1CB876F62A34D72E008B6F3E /* ConsoleDetailView.swift */,
+				1C936CDA2A35E0460013F910 /* MainMenu.swift */,
 				1CB876CC2A34D3F4008B6F3E /* Assets.xcassets */,
 				1CB876CE2A34D3F4008B6F3E /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB876CB2A34D3F1008B6F3E /* ContentView.swift in Sources */,
+				1C936CDB2A35E0460013F910 /* MainMenu.swift in Sources */,
+				1CB876F72A34D72E008B6F3E /* ConsoleDetailView.swift in Sources */,
 				1CB876C92A34D3F1008B6F3E /* FTNTApp.swift in Sources */,
+				1CB876F52A34D448008B6F3E /* Consoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
