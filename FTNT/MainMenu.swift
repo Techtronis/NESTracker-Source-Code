@@ -9,24 +9,127 @@ import SwiftUI
 
 struct MainMenu: View {
     
-    var con = ConsoleList()
+    var categories = ConsoleList.categories.sorted(by: { $0.key < $1.key })
+    @State private var searchText: String = ""
+    var cons: [ConsoleDetails]
+    
+    var filteredConsoles: [ConsoleDetails] {
+        if searchText.isEmpty {
+            return cons
+        } else {
+            return cons.filter { $0.consoleName.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
     
     var body: some View {
-        NavigationView{
-            List(con.categories, id:\.self) { category in
-                if(category.self == "Hybrid"){
-                    NavigationLink(destination: ConsoleMenu(), label: {
-                        Text("Hybrid")
-                    }).navigationTitle("FTNT")
-                }
+        VStack{
+            NavigationStack{
+                List(){
+                    if searchText != ""{
+                        ForEach(filteredConsoles, id: \.id) { item in
+                            NavigationLink(destination: ConsoleDetailView(item: item)) {
+                                HStack {
+                                    Image(item.imgName)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 60, height: 60)
+                                    VStack (alignment: .leading){
+                                        Text(item.consoleName)
+                                            .fontWeight(.semibold)
+                                        Text(item.category)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.gray)
+                                    }
+                                    if item.favorites {
+                                        Image(systemName: "star.fill")
+                                            .foregroundColor(.yellow)
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        Section(header: Text("General")){
+                            NavigationLink(destination: CurrentConsoles(cons: ConsoleList.consoles), label: {
+                                HStack{
+                                    Image(systemName: "folder")
+                                        .foregroundColor(.red)
+                                    Text("Current Consoles")
+                                        .fontWeight(.medium)
+                                }
+                            })
+                            /*NavigationLink(destination: Favorites(cons: ConsoleList.consoles), label: {
+                             HStack{
+                             Image(systemName: "folder")
+                             .foregroundColor(.red)
+                             Text("Favorites")
+                             .fontWeight(.medium)
+                             }
+                             })*/
+                            ForEach(categories, id:\.key) { category in
+                                if (category.key == "Other" || category.key == "Current Consoles"){
+                                    NavigationLink(destination: ConsoleMenu(cons: category.value), label: {
+                                        Section{
+                                            HStack{
+                                                Image(systemName: "folder")
+                                                    .foregroundColor(.red)
+                                                Text(category.key)
+                                                    .fontWeight(.medium)
+                                            }
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                        Section(header: Text("Home Consoles")){
+                            ForEach(categories, id:\.key) { category in
+                                if (category.key == "Color TV Game" || category.key == "Home Consoles" || category.key == "Nintendo Switch"){
+                                    NavigationLink(destination: ConsoleMenu(cons: category.value), label: {
+                                        Section{
+                                            HStack{
+                                                Image(systemName: "folder")
+                                                    .foregroundColor(.red)
+                                                Text(category.key)
+                                                    .fontWeight(.medium)
+                                            }
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                        Section(header: Text("Handhelds")){
+                            ForEach(categories, id:\.key) { category in
+                                if (category.key == "Game & Watch" || category.key == "Nintendo DS / 3DS" || category.key == "Game Boy" || category.key == "iQue"){
+                                    NavigationLink(destination: ConsoleMenu(cons: category.value), label: {
+                                        Section{
+                                            HStack{
+                                                Image(systemName: "folder")
+                                                    .foregroundColor(.red)
+                                                Text(category.key)
+                                                    .fontWeight(.medium)
+                                            }
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                        Section(header: Text("About me")){
+                            Text("""
+    Thank you for downloading my app <3
+    If you notice issues, errors or have any suggestions, please contact me at alexisjost20@gmail.com
+    """)
+                        }
+                    }
+                }.navigationTitle("NESTracker")
+                    .searchable(text: $searchText, prompt: "Search Consoles")
+                
             }
         }
     }
 }
 
-
 struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {
-        MainMenu()
+        MainMenu(cons: ConsoleList.consoles)
     }
 }
+

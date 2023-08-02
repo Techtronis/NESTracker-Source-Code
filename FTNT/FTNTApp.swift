@@ -11,7 +11,7 @@ import SwiftUI
 struct FTNTApp: App {
     var body: some Scene {
         WindowGroup {
-            MainMenu()
+            MainMenu(cons: ConsoleList.consoles)
         }
     }
 }

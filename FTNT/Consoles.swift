@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ConsoleDetails: Identifiable{
-    let id = UUID()
+    var id = UUID()
     var imgName: String = ""
     var consoleName: String = ""
     var mostSoldGame: String = ""
@@ -14,8 +14,9 @@ struct ConsoleDetails: Identifiable{
     var cables: String = ""
     var processor: String = ""
     var screenSize: String = ""
+    var modelNumber: String = ""
     var dims: String = ""
-    var favorites: Bool = false
+    @State var favorites: Bool = false
     var discontinued: Bool = true
     var isHandheld: Bool = true
 }
@@ -23,28 +24,32 @@ struct ConsoleDetails: Identifiable{
 
 struct ConsoleList {
     //The consoles list but I'll only put one to save space
-    var categories: [String] {
-        ConsoleList.consoles.map { console in
-            console.category
-        }
-    }
+    static let categories = Dictionary(grouping: consoles, by: {$0.category})
     
     static var consoles = [
         //Current Consoles
         ConsoleDetails(imgName: "NS_OG",
                        consoleName: "Nintendo Switch",
                        mostSoldGame: "Mario Kart 8 Deluxe",
-                       initialPrice: "299.99",
+                       initialPrice: "$299.99",
                        ReleaseDate: "Mar 3, 2017",
                        Discontinuation: "Still Available",
-                       category: "Hybrid",
+                       category: "Nintendo Switch",
                        estimatedPricedToday: "$200-250 used",
-                       cables: "HDMI, USB Type-C, Micro SD card slot, 3x USB Ports",
+                       cables: """
+                        HDMI,\"
+                         USB Type-C, Micro SD card slot,\"
+                         3x USB Ports\"
+                        """,
                        processor: "Nvidia Tegra X1",
                        screenSize: """
                        Capacitive touch screen
                         6.2 inch LCD Screen
                         1280 x 720
+                       """,
+                       modelNumber: """
+                       V1: HAC-001
+                        V2: HAC-001(-01)
                        """,
                        dims: """
                           W: 9.40\"
@@ -57,18 +62,22 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NS_LITE",
                        consoleName: "Nintendo Switch Lite",
                        mostSoldGame:  "Mario Kart 8 Deluxe",
-                       initialPrice: "249.99",
+                       initialPrice: "$249.99",
                        ReleaseDate: "Sept 20, 2019",
                        Discontinuation: "Still Available",
-                       category: "Hybrid",
+                       category: "Nintendo Switch",
                        estimatedPricedToday: "$100-150 used",
-                       cables: "USB Type-C, Micro SD card slot",
+                       cables: """
+                       USB Type-C,
+                        Micro SD card slot
+                       """,
                        processor: "Nvidia Tegra X1+",
                        screenSize: """
                       Capacitive touch screen
                        5.5 inch LCD
                        1280 x 720
                       """,
+                       modelNumber: "HDH-001",
                        dims: """
                        W: 8.18\"
                         H: 3.38\"
@@ -80,18 +89,25 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NS_OLED",
                        consoleName: "Nintendo Switch OLED",
                        mostSoldGame:  "Mario Kart 8 Deluxe",
-                       initialPrice: "349.99",
+                       initialPrice: "$349.99",
                        ReleaseDate: "Oct 8, 2021",
                        Discontinuation: "Still Available",
-                       category: "Hybrid",
+                       category: "Nintendo Switch",
                        estimatedPricedToday: "$250-300 used",
-                       cables: "HDMI, USB Type-C, Micro SD card slot, 2x USB Ports, LAN port",
+                       cables: """
+                       HDMI,
+                        USB Type-C,
+                        Micro SD card slot,
+                        2x USB Ports,
+                        LAN port
+                       """,
                        processor: "Nvidia Tegra X1",
                        screenSize: """
                        Capacitive touch screen
                         7-inch OLED display
                         1280 x 720
                        """,
+                       modelNumber: "HEG-001",
                        dims: """
                        W: 9.5\"
                         H: 4\"
@@ -111,6 +127,8 @@ struct ConsoleList {
                        estimatedPricedToday: "$100-400 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Unknown",
+                       modelNumber: "CTG-6S",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -124,6 +142,8 @@ struct ConsoleList {
                        estimatedPricedToday: "$100-400 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Unknown",
+                       modelNumber: "CTG-15S",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -137,6 +157,8 @@ struct ConsoleList {
                        estimatedPricedToday: "$100-400 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Unknown",
+                       modelNumber: "CTG-112S",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -150,6 +172,8 @@ struct ConsoleList {
                        estimatedPricedToday: "$100-400 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Unknown",
+                       modelNumber: "CTG-BK6",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -163,6 +187,8 @@ struct ConsoleList {
                        estimatedPricedToday: "$100-400 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Unknown",
+                       modelNumber: "CTG-HC10",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
@@ -177,26 +203,34 @@ struct ConsoleList {
                        estimatedPricedToday: "$300'000",
                        cables: "Unknown",
                        processor: "Unknown",
+                       modelNumber: "Unknown",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
         ConsoleDetails(imgName: "PQCube",
                        consoleName: "Panasonic Q Gamecube",
                        mostSoldGame: "Super Smash Bros Melee",
-                       initialPrice: "429.99",
+                       initialPrice: "$429.99",
                        ReleaseDate: "December 13, 2001",
                        Discontinuation: "2003",
                        category: "Other",
                        estimatedPricedToday: "$200-650 used depending on condition",
-                       cables: "4x Controller Ports, 2 memory slots, AC Adapter",
+                       cables: """
+                            4x Controller Ports,
+                             2 memory slots,
+                             AC Adapter
+                            """,
                        processor: "485 MHz PowerPC 750CXe",
+                       modelNumber: "SL-GC10",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
         ConsoleDetails(imgName: "pkmnmini",
                        consoleName: "Pokémon Mini",
                        mostSoldGame: "Pokémon Party mini",
-                       initialPrice: "40",
+                       initialPrice: "$40",
                        ReleaseDate: "December 14, 2001",
                        Discontinuation: "2005",
                        category: "Other",
@@ -204,6 +238,8 @@ struct ConsoleList {
                        cables: "1x AAA Battery Slot, 1x Game Card slot",
                        processor: "4 MHz Epson S1C88",
                        screenSize: "96 x 64 Monochrome LCD",
+                       modelNumber: "MIN-001",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
@@ -219,6 +255,7 @@ struct ConsoleList {
                        estimatedPricedToday: "$40-120 used depending on condition",
                        cables: "RF out, AC Adapter",
                        processor: "Ricoh 2A03",
+                       modelNumber: "HVC-001",
                        dims:"""
                        W: 5.6\"
                         D: 9.1\"
@@ -230,13 +267,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NES",
                        consoleName: "NES",
                        mostSoldGame: "Super Mario Bros",
-                       initialPrice: "179.99",
+                       initialPrice: "$179.99",
                        ReleaseDate: "Oct 18, 1985",
                        Discontinuation: "1991",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-100 used depending on condition",
                        cables: "AV cables, AC Adapter",
                        processor: "Ricoh 2A03",
+                       modelNumber: "NES-001",
                        dims: """
                        W: 10.1\"
                         H: 8\"
@@ -248,13 +286,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "SF_JPN",
                        consoleName: "Super Famicom (Japan Only)",
                        mostSoldGame: "Super Mario World",
-                       initialPrice: "¥25,000",
+                       initialPrice: "$25,000",
                        ReleaseDate: "Nov 21, 1990",
                        Discontinuation: "2003",
                        category: "Home Consoles",
                        estimatedPricedToday: "$35-85 used depending on condition",
                        cables: "RF Out, AV, AC Adapter",
                        processor: "Ricoh 5A22",
+                       modelNumber: "SNS-101",
                        dims: """
                        W: 7.67\"
                         H: 2.75\"
@@ -266,13 +305,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "US_SNES",
                        consoleName: "SNES (North America Only)",
                        mostSoldGame: "Super Mario World",
-                       initialPrice: "199.99",
+                       initialPrice: "$199.99",
                        ReleaseDate: "Sept 9, 1991",
                        Discontinuation: "1999",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-150 used depending on condition",
                        cables: "RF Out, AV, AC Adapter",
                        processor: "Ricoh 5A22",
+                       modelNumber: "SNS-101",
                        dims: """
                        W: 8\"
                         H: 2.68\"
@@ -284,13 +324,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "EU_SNES",
                        consoleName: "SNES (EU Version)",
                        mostSoldGame: "Super Mario World",
-                       initialPrice: "199.99",
+                       initialPrice: "$199.99",
                        ReleaseDate: "Sept 9, 1991",
                        Discontinuation: "1999",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-150 used depending on condition",
                        cables: "RF Out, AV, AC Adapter",
                        processor: "Ricoh 5A22",
+                       modelNumber: "SNS-101",
                        dims: """
                        W: 7.67\"
                         H: 2.75\"
@@ -302,13 +343,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "topnes",
                        consoleName: "NES Top Loader",
                        mostSoldGame: "Super Mario Bros",
-                       initialPrice: "49.99",
+                       initialPrice: "$49.99",
                        ReleaseDate: "Oct 15, 1993",
                        Discontinuation: "2003",
                        category: "Home Consoles",
                        estimatedPricedToday: "$100-250 used depending on condition",
                        cables: "AV cables, AC Adapter",
                        processor: "Ricoh 2A03",
+                       modelNumber: "NES-101",
                        dims: """
                        W: 14\"
                         H: 22\"
@@ -320,13 +362,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "N64",
                        consoleName: "Nintendo 64",
                        mostSoldGame: "Super Mario 64",
-                       initialPrice: "199.99",
+                       initialPrice: "$199.99",
                        ReleaseDate: "Sept 29, 1996",
                        Discontinuation: "2002",
                        category: "Home Consoles",
                        estimatedPricedToday: "$60-120 used depending on condition",
                        cables: "AV Multi Out, AC Adapter",
                        processor: "NEC VR4300",
+                       modelNumber: "NUS-001",
                        dims: """
                        W: 10.23\"
                         H: 2.87\"
@@ -338,13 +381,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GAMECUBE",
                        consoleName: "Gamecube",
                        mostSoldGame: "Super Smash Bros Melee",
-                       initialPrice: "199",
+                       initialPrice: "$199",
                        ReleaseDate: "Sept 14, 2001",
                        Discontinuation: "2007",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-130 used depending on condition",
                        cables: "AV Multi Out, AC Adapter",
                        processor: "IBM PowerPC 750CXe",
+                       modelNumber: "DOL-001 or DOL-101",
                        dims: """
                        W: 5.9\"
                         H: 4.3\"
@@ -354,15 +398,35 @@ struct ConsoleList {
                        discontinued: true,
                        isHandheld: false),
         ConsoleDetails(imgName: "WII",
-                       consoleName: "Wii",
+                       consoleName: "Wii (Gamecube)",
                        mostSoldGame: "Wii Sports",
-                       initialPrice: "249.99",
+                       initialPrice: "$249.99",
                        ReleaseDate: "Nov 19, 2006",
                        Discontinuation: "2013",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-100 used depending on condition",
+                       cables: "AV Multi Out, AC adapter, 2x Memory slots,  4x Gamecube controller ports",
+                       processor: "IBM PowerPC Broadway",
+                       modelNumber: "RVL-001",
+                       dims: """
+                       W: 2.37\"
+                        H: 6.18\"
+                        D: 7.75\"
+                       """,
+                       favorites: false,
+                       discontinued: true,
+                       isHandheld: false),
+        ConsoleDetails(imgName: "WIING",
+                       consoleName: "Wii Family Edition",
+                       mostSoldGame: "Wii Sports",
+                       initialPrice: "$149.99",
+                       ReleaseDate: "Oct 23, 2011",
+                       Discontinuation: "2014",
+                       category: "Home Consoles",
+                       estimatedPricedToday: "$40-100 used depending on condition",
                        cables: "AV Multi Out, AC adapter",
                        processor: "IBM PowerPC Broadway",
+                       modelNumber: "RVL-101",
                        dims: """
                        W: 2.37\"
                         H: 6.18\"
@@ -374,13 +438,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "WII_MINI",
                        consoleName: "Wii Mini",
                        mostSoldGame: "Wii Sports",
-                       initialPrice: "99.99",
+                       initialPrice: "$99.99",
                        ReleaseDate: "Nov 17, 2013",
                        Discontinuation: "2017",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-70 used depending on condition",
                        cables: "HDMI, USB Type-C",
                        processor: "IBM PowerPC Broadway",
+                       modelNumber: "RVL-201",
                        dims: "7.67\" 2.75\" 9.44\"",
                        favorites: false,
                        discontinued: true,
@@ -388,13 +453,14 @@ struct ConsoleList {
         ConsoleDetails(imgName: "WII_U",
                        consoleName: "Wii U",
                        mostSoldGame: "Mario Kart 8",
-                       initialPrice: "299.99",
+                       initialPrice: "$299.99",
                        ReleaseDate: "Nov 18, 2012",
                        Discontinuation: "2017",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-150 used depending on condition",
                        cables: "HDMI, AV Multi Out, AC Adapter",
                        processor: "IBM PowerPC Espresso",
+                       modelNumber: "WUP-001 (deluxe) WUP-001(-02) (basic)",
                        dims: """
                        W: 6.8\"
                         H: 1.8\"
@@ -407,7 +473,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "DS_PHAT",
                        consoleName: "Original Nintendo DS",
                        mostSoldGame: "New Super Mario Bros",
-                       initialPrice: "149.99",
+                       initialPrice: "$149.99",
                        ReleaseDate: "Nov 21, 2004",
                        Discontinuation: "2009",
                        category: "Nintendo DS / 3DS",
@@ -418,6 +484,7 @@ struct ConsoleList {
                        Top: 3 inch display
                         Bottom: 3 inch resistive touch screen
                        """,
+                       modelNumber: "NTR-001",
                        dims: """
                        W: 5.85\"
                         H: 3.33\" (closed) 6.3\" (opened)
@@ -429,7 +496,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "DS_LITE",
                        consoleName: "Nintendo DS Lite",
                        mostSoldGame: "New Super Mario Bros",
-                       initialPrice: "129.99",
+                       initialPrice: "$129.99",
                        ReleaseDate: "Mar 2, 2006",
                        Discontinuation: "2001",
                        category: "Nintendo DS / 3DS",
@@ -440,6 +507,7 @@ struct ConsoleList {
                        Top: 3 inch display
                         Bottom: 3 inch resistive touch screen
                        """,
+                       modelNumber: "USG-001",
                        dims: """
                        W: 5.2\"
                         H: 2.9\" (closed) 5.47\" (opened)
@@ -451,7 +519,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "DSI",
                        consoleName: "Nintendo DSi",
                        mostSoldGame: "New Super Mario Bros",
-                       initialPrice: "169.99",
+                       initialPrice: "$169.99",
                        ReleaseDate: "Nov 1, 2008",
                        Discontinuation: "2014",
                        category: "Nintendo DS / 3DS",
@@ -462,6 +530,7 @@ struct ConsoleList {
                        Top: 3.25 inch display
                         Bottom: 3.25 inch resistive touch screen
                        """,
+                       modelNumber: "TWL-001",
                        dims: """
                        W: 5.39\"
                         H: 2.95\"
@@ -473,7 +542,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "DSI XL",
                        consoleName: "Nintendo DSi XL",
                        mostSoldGame: "New Super Mario Bros",
-                       initialPrice: "169.99",
+                       initialPrice: "$169.99",
                        ReleaseDate: "Nov 1, 2008",
                        Discontinuation: "2010",
                        category: "Nintendo DS / 3DS",
@@ -484,6 +553,7 @@ struct ConsoleList {
                        Top: 4.2 inch display
                         Bottom: 4.2 inch resistive touch screen
                        """,
+                       modelNumber: "UTL-001",
                        dims: """
                        W: 6.33\"
                         H: 3.59\"
@@ -495,7 +565,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "3DS",
                        consoleName: "Nintendo 3DS",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "249.99",
+                       initialPrice: "$249.99",
                        ReleaseDate: "Feb 26, 2011",
                        Discontinuation: "2015",
                        category: "Nintendo DS / 3DS",
@@ -506,6 +576,7 @@ struct ConsoleList {
                        Top: 3.5 inch display
                         Bottom: 3.02 inch resistive touch screen
                        """,
+                       modelNumber: "CTR-001",
                        dims: """
                        W: 5.3\"
                         H: 2.9\"
@@ -517,7 +588,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "3DSXL",
                        consoleName: "Nintendo 3DS XL",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "199.99",
+                       initialPrice: "$199.99",
                        ReleaseDate: "August 19, 2012",
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
@@ -528,6 +599,7 @@ struct ConsoleList {
                        Top: 4.88 inch display
                         Bottom: 4.18 inch resistive touch screen
                        """,
+                       modelNumber: "SPR-001",
                        dims: """
                        W: 6.1\"
                         H: 3.7\"
@@ -539,7 +611,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NINTENDO2DS",
                        consoleName: "Nintendo 2DS",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "129.99",
+                       initialPrice: "$129.99",
                        ReleaseDate: "Oct 12, 2013",
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
@@ -550,6 +622,7 @@ struct ConsoleList {
                        Top: 3.5 inch display
                         Bottom: 3.02 inch capacitive touch screen
                        """,
+                       modelNumber: "FTR-001",
                        dims: """
                        W: 5.66\"
                         H: 5\"
@@ -561,7 +634,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NEW3DS",
                        consoleName: "New Nintendo 3DS",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "219.99",
+                       initialPrice: "$219.99",
                        ReleaseDate: "Feb 13, 2015",
                        Discontinuation: "2017",
                        category: "Nintendo DS / 3DS",
@@ -572,6 +645,7 @@ struct ConsoleList {
                        Top: 3.5 inch display
                         Bottom: 3.02 inch capacitive touch screen
                        """,
+                       modelNumber: "KTR-001",
                        dims: """
                        W: 5.59\"
                         H: 3.17\" (Closed) 5.89\" (Opened)
@@ -583,7 +657,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NEW3DSXL",
                        consoleName: "New Nintendo 3DS XL",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "199.99",
+                       initialPrice: "$199.99",
                        ReleaseDate: "Feb 13, 2015",
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
@@ -594,6 +668,7 @@ struct ConsoleList {
                        Top: 4.88 inch display
                         Bottom: 4.18 inch resistive touch screen
                        """,
+                       modelNumber: "RED-001",
                        dims: """
                        W: 5.85\"
                         H: 3.33\"
@@ -605,7 +680,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "NEW2DSXL",
                        consoleName: "New Nintendo 2DS XL",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "149.99",
+                       initialPrice: "$149.99",
                        ReleaseDate: "Jul 28, 2017",
                        Discontinuation: "2020",
                        category: "Nintendo DS / 3DS",
@@ -616,6 +691,7 @@ struct ConsoleList {
                        Top: 4.88 inch display
                         Bottom: 4.18 inch resistive touch screen
                        """,
+                       modelNumber: "JAN-001",
                        dims: """
                        W: 6.3\"
                         H: 3.4\"
@@ -628,20 +704,22 @@ struct ConsoleList {
         ConsoleDetails(imgName: "IQUEPLAYER",
                        consoleName: "iQue Player",
                        mostSoldGame: "Dr. Mario 64",
-                       initialPrice: "73.00",
+                       initialPrice: "$73.00",
                        ReleaseDate: "November 17, 2003",
                        Discontinuation: "2016",
                        category: "iQue",
                        estimatedPricedToday: "$500-800 used depending on condition",
                        cables: "AC Adapter",
                        processor: "R-4300i 64Bit CPU @ 140.625 MHz",
+                       modelNumber: "Unknown",
+                       dims: "Unknown",
                        favorites: false,
                        discontinued: true,
                        isHandheld: false),
         ConsoleDetails(imgName: "IQUEGBA",
                        consoleName: "iQue GameBoy Advance",
                        mostSoldGame: "Super Mario World - Super Mario Advance 2",
-                       initialPrice: "72.00",
+                       initialPrice: "$72.00",
                        ReleaseDate: "June 8, 2004",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -649,6 +727,7 @@ struct ConsoleList {
                        cables: "2x AA Batteries",
                        processor: "ARM7TDMI (16.8 MHz) & Sharp LR35902 (4.194 MHz)",
                        screenSize: "2.9 inch TFT",
+                       modelNumber: "AGB-001",
                        dims: """
                        W: 5.7\"
                         H: 3.2\"
@@ -660,7 +739,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "IQUEGBASP",
                        consoleName: "iQue GameBoy Advance SP",
                        mostSoldGame: "Super Mario World - Super Mario Advance 2",
-                       initialPrice: "72.00",
+                       initialPrice: "$72.00",
                        ReleaseDate: "Oct 28, 2004",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -668,6 +747,7 @@ struct ConsoleList {
                        cables: "AC Adapter",
                        processor: "RISC-CPU (16.78 MHz)",
                        screenSize: "2.9 inch Backlit (AGS-101) / Frontlit (AGS-001) TFT",
+                       modelNumber: "AGS-001 (Frontlit) or AGS-101 (Backlit)",
                        dims: """
                        W: 3.23\"
                         H: 3.3\"
@@ -677,9 +757,9 @@ struct ConsoleList {
                        discontinued: true,
                        isHandheld: true),
         ConsoleDetails(imgName: "IQUEGBM",
-                       consoleName: "iQue GameBoy Micro",
+                       consoleName: "iQue Micro",
                        mostSoldGame: "Super Mario World - Super Mario Advance 2",
-                       initialPrice: "99.00",
+                       initialPrice: "$99.00",
                        ReleaseDate: "Oct 1, 2005",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -687,6 +767,7 @@ struct ConsoleList {
                        cables: "AC Adapter",
                        processor: "ARM7TDMI (16.78 MHz)",
                        screenSize: "2 inch backlit TFT",
+                       modelNumber: "OXY-001",
                        dims: """
                        W: 2\"
                         H: 4\"
@@ -698,7 +779,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "IQUEDS",
                        consoleName: "iQue DS",
                        mostSoldGame: "New Super Mario Bros.",
-                       initialPrice: "130.00",
+                       initialPrice: "$130.00",
                        ReleaseDate: "July 23, 2005",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -709,13 +790,14 @@ struct ConsoleList {
                        Top: 3 inch display
                        Bottom: 3 inch resistive touch screen
                        """,
+                       modelNumber: "NTR-001",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
         ConsoleDetails(imgName: "IQUEDSLITE",
                        consoleName: "iQue DS Lite",
                        mostSoldGame: "New Super Mario Bros.",
-                       initialPrice: "110.00",
+                       initialPrice: "$110.00",
                        ReleaseDate: "June 26, 2006",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -726,6 +808,7 @@ struct ConsoleList {
                        Top: 3 inch display
                         Bottom: 3 inch resistive touch screen
                        """,
+                       modelNumber: "UGS-001",
                        dims: """
                        W: 5.2\"
                         H: 2.9\" (closed) 5.47\" (opened)
@@ -737,7 +820,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "IQUEDSI",
                        consoleName: "iQue DSi",
                        mostSoldGame: "New Super Mario Bros.",
-                       initialPrice: "129.99",
+                       initialPrice: "$129.99",
                        ReleaseDate: "Nov 1, 2008",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -748,6 +831,7 @@ struct ConsoleList {
                        Top: 3.25 inch display
                         Bottom: 3.25 inch resistive touch screen
                        """,
+                       modelNumber: "TWL-001",
                        dims: """
                        W: 5.39\"
                         H: 2.95\"
@@ -759,7 +843,7 @@ struct ConsoleList {
         ConsoleDetails(imgName: "IQUE3DSXL",
                        consoleName: "iQue 3DS XL",
                        mostSoldGame: "Mario Kart 7",
-                       initialPrice: "149.99",
+                       initialPrice: "$149.99",
                        ReleaseDate: "Dec, 2012",
                        Discontinuation: "2016",
                        category: "iQue",
@@ -770,6 +854,7 @@ struct ConsoleList {
                        Top: 4.88 inch display
                         Bottom: 4.18 inch resistive touch screen
                        """,
+                       modelNumber: "SPR-001",
                        dims: """
                        W: 6.1\"
                         H: 3.7\"
@@ -783,14 +868,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GB_FAT",
                        consoleName: "Original GameBoy",
                        mostSoldGame: "Tetris",
-                       initialPrice: "89.99",
+                       initialPrice: "$89.99",
                        ReleaseDate: "Apr 21, 1989",
                        Discontinuation: "2001",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$50-130 used depending on condition",
                        cables: "4x AA Batteries",
                        processor: "Sharp LR35902 (4.19 MHz)",
                        screenSize: "2.6 inch LCD",
+                       modelNumber: "DMG-001",
                        dims: """
                        W: 3.5\"
                         H: 5.8\"
@@ -802,13 +888,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "VB",
                        consoleName: "Virtual Boy",
                        mostSoldGame: "Wario Land",
-                       initialPrice: "179.95",
+                       initialPrice: "$179.95",
                        ReleaseDate: "Aug 21, 1995",
                        Discontinuation: "1996",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$60-250 used depending on condition",
                        cables: "6x AA Batteries",
                        processor: "NEC V810 (20 MHz)",
+                       screenSize: "2x 384x224 Red 2 Bit Displays",
+                       modelNumber: "VUE-001",
                        dims: """
                        W: 10\"
                         H: 8.5\"
@@ -820,14 +908,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GB_POCKET",
                        consoleName: "GameBoy Pocket",
                        mostSoldGame: "Tetris",
-                       initialPrice: "69.99",
+                       initialPrice: "$69.99",
                        ReleaseDate: "Jul 21, 1996",
                        Discontinuation: "2003",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$50-80 used depending on condition",
                        cables: "2x AAA Batteries",
                        processor: "Sharp LR35902 (4.19 MHz)",
                        screenSize: "2.6 inch LCD",
+                       modelNumber: "MGB-001",
                        dims: """
                        W: 3.05\"
                         H: 5.02\"
@@ -839,14 +928,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GB_LIGHT",
                        consoleName: "GameBoy Light",
                        mostSoldGame: "Tetris",
-                       initialPrice: "89.99",
+                       initialPrice: "$89.99",
                        ReleaseDate: "Apr 14, 1998",
                        Discontinuation: "2003",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$90-140 used depending on condition",
                        cables: "2x AAA Batteries",
                        processor: "Sharp LR35902 (4.19 MHz)",
                        screenSize: "2.6 inch Frontlit LCD",
+                       modelNumber: "MGB-101",
                        dims: """
                        W: 5.08\"
                         H: 6.54\"
@@ -858,14 +948,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GBC",
                        consoleName: "GameBoy Color",
                        mostSoldGame: "Pokémon Red/Blue/Yellow/Green",
-                       initialPrice: "69.99",
+                       initialPrice: "$69.99",
                        ReleaseDate: "Oct 21, 1998",
                        Discontinuation: "2003",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$50-130 used depending on condition",
                        cables: "2x AA Batteries",
                        processor: "Sharp LR35902 (8.4 MHz)",
                        screenSize: "2.9 inch TFT",
+                       modelNumber: "CGB-001",
                        dims: """
                        W: 3.07\"
                         H: 5.25\"
@@ -877,14 +968,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GBA",
                        consoleName: "GameBoy Advance",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
-                       initialPrice: "99.99",
+                       initialPrice: "$99.99",
                        ReleaseDate: "Mar 21, 2001",
                        Discontinuation: "2010",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$40-100 used depending on condition",
                        cables: "2x AA Batteries",
                        processor: "ARM7TDM (16.8 MHz)",
                        screenSize: "2.9 inch TFT",
+                       modelNumber: "AGB-001",
                        dims: """
                        W: 5.7\"
                         H: 3.2\"
@@ -896,14 +988,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GBA_SP",
                        consoleName: "GameBoy Advance SP",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
-                       initialPrice: "99.99",
+                       initialPrice: "$99.99",
                        ReleaseDate: "Feb 14, 2003",
                        Discontinuation: "2008",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$70-130 used depending on condition",
                        cables: "AC Adapter",
                        processor: "ARM7TDM (16.8 MHz)",
-                       screenSize: "2.9 inch Backlit (AGS-101) / Frontlit (AGS-001) TFT",
+                       screenSize: "2.9 inch TFT",
+                       modelNumber: "AGS-001 (Frontlit) AGS-101 (Backlit)",
                        dims: """
                        W: 3.23\"
                         H: 3.3\"
@@ -915,14 +1008,15 @@ struct ConsoleList {
         ConsoleDetails(imgName: "GB_MICRO",
                        consoleName: "GameBoy Micro",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
-                       initialPrice: "99.99",
+                       initialPrice: "$99.99",
                        ReleaseDate: "Feb 14, 2003",
                        Discontinuation: "2008",
-                       category: "GameBoys",
+                       category: "Game Boy",
                        estimatedPricedToday: "$80-200 used depending on condition",
                        cables: "AC Adapter",
                        processor: "16.8 MHz ARM",
                        screenSize: "2 inch backlit TFT",
+                       modelNumber: "OXY-001",
                        dims: """
                        W: 2\"
                         H: 4\"
@@ -943,6 +1037,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "AC-01",
                        dims: """
                       W: 3.74\"
                        H: 2.48\"
@@ -962,6 +1057,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "FL-02",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -981,6 +1077,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "MT-03",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1000,6 +1097,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "RC-04",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1019,6 +1117,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "IP-05",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1038,6 +1137,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "MH-06",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1057,6 +1157,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "CN-07",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1076,6 +1177,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "LN-08",
                        dims: """
                        W: 3.74\"
                         H: 2.48\"
@@ -1095,6 +1197,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "PR-21",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1114,6 +1217,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "OC-22",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1133,6 +1237,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "PP-23",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1152,6 +1257,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "FP-24",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1171,6 +1277,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "MC-25",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1190,6 +1297,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "EG-26",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1209,6 +1317,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "TL-28",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1228,6 +1337,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "ID-29",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1247,6 +1357,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "SP-30",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1266,6 +1377,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "OP-51",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1285,6 +1397,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "DK-52",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1304,6 +1417,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "MD-53",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1323,6 +1437,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "GH-54",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1342,6 +1457,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "JR-55",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1361,6 +1477,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "MW-56",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1380,6 +1497,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "LP-57",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1399,6 +1517,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "TC-58",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1418,6 +1537,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "PB-59",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1437,6 +1557,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "BJ-60",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1456,6 +1577,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "MG-61",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1475,6 +1597,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "BD-62",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1494,6 +1617,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "JB-63",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1513,6 +1637,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "MV-64",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1532,6 +1657,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2x 2.5 inch LCD",
+                       modelNumber: "ZL-65",
                        dims: """
                        W: 4.52\"
                         H: 2.95\" (Closed), 5.51\" (Opened)
@@ -1551,6 +1677,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "DJ-101",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1570,6 +1697,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "ML-102",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1589,6 +1717,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "TF-104",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1608,6 +1737,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "YM-105",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1626,6 +1756,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "DR-106",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1645,6 +1776,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "BF-107",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1664,6 +1796,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "MB-108",
                        dims: """
                        W: 4.4\"
                         H: 2.6\"
@@ -1683,6 +1816,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "CJ-71",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
@@ -1697,6 +1831,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "CM-72",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
@@ -1711,6 +1846,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "SM-73",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
@@ -1725,6 +1861,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "PG-74",
                        favorites: false,
                        discontinued: true,
                        isHandheld: true),
@@ -1739,6 +1876,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "SM-91",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1758,6 +1896,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "PG-92",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1777,6 +1916,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "CJ-93",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1796,6 +1936,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "TB-94",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1815,6 +1956,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "DC-95",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1834,6 +1976,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "MK-96",
                        dims: """
                        W: 3.46\"
                         H: 5.74\"
@@ -1853,6 +1996,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "BU-201",
                        dims: """
                        W: 2.75\"
                         H: 5.7\"
@@ -1872,6 +2016,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "UD-202",
                        dims: """
                        W: 2.75\"
                         H: 5.7\"
@@ -1891,6 +2036,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "BX-301",
                        dims: """
                        W: 6.22\"
                         H: 3.38\"
@@ -1910,6 +2056,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "AK-302",
                        dims: """
                        W: 6.22\"
                         H: 3.38\"
@@ -1929,6 +2076,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "HK-303",
                        dims: """
                        W: 6.22\"
                         H: 3.38\"
@@ -1948,6 +2096,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "YM-801",
                        dims: """
                        W: 2.4\"
                         H: 5.66\"
@@ -1967,6 +2116,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "DR-802",
                        dims: """
                        W: 2.4\"
                         H: 5.66\"
@@ -1986,6 +2136,7 @@ struct ConsoleList {
                        cables: "2 LR44 batteries",
                        processor: "Sharp SM5xx family",
                        screenSize: "3 inch LCD",
+                       modelNumber: "BF-803",
                        dims: """
                        W: 2.4\"
                         H: 5.66\"
@@ -2005,6 +2156,7 @@ struct ConsoleList {
                        cables: "1 CR2024",
                        processor: "Sharp SM5xx family",
                        screenSize: "2.35 inch LCD",
+                       modelNumber: "RGW-001",
                        dims: """
                        W: 9.40\"
                         H: 4.01\"
@@ -2024,6 +2176,7 @@ struct ConsoleList {
                        cables: "USB Type-C",
                        processor: "STM32H7B0VBT6",
                        screenSize: "2.36 inch LCD",
+                       modelNumber: "CLV-003",
                        dims: """
                        W: 2.6\"
                         H: 4.9\"
@@ -2043,6 +2196,7 @@ struct ConsoleList {
                        cables: "USB Type-C",
                        processor: "STM32H7B0VBT6",
                        screenSize: "2.36 inch LCD",
+                       modelNumber: "HXB-001",
                        dims: """
                        W: 2.6\"
                         H: 4.9\"

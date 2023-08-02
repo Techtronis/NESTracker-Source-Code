@@ -4,71 +4,98 @@
 //
 //  Created by Alexis Jost on 10.06.23.
 //
-
 import SwiftUI
+import Foundation
 
 struct ConsoleDetailView: View {
     
-    var con: ConsoleDetails
+    var item: ConsoleDetails
+    @State var favLog: Bool = false
+    
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             List{
                 HStack(){
-                    Image(con.imgName)
+                    /*Button {
+                        item.favorites.toggle()
+                    } label: {
+                        Text("confav")
+                    }*/
+                    
+
+                    Image(item.imgName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width:140)
+                        .frame(width:130, height:130)
                     VStack(alignment: .leading){
-                        Text(con.consoleName)
+                        
+                        Text(item.consoleName)
                             .fontWeight(.semibold)
                             .font(.system(size:23))
-                        Text(con.ReleaseDate)
+                        Text(item.ReleaseDate)
                             .font(.subheadline)
                     }
                 }
                 Text("""
                      Discontinued:
-                     \(con.Discontinuation)
+                     \(item.Discontinuation)
                     """)
                 Text("""
-                     Most sold game:
-                     \(con.mostSoldGame)
+                     Model Number:
+                     \(item.modelNumber)
                     """)
+                if(item.category != "Game & Watch"){
+                    Text("""
+                         Most sold game:
+                         \(item.mostSoldGame)
+                        """)
+                } else {
+                    Text("""
+                         Series:
+                         \(item.mostSoldGame)
+                        """)
+                }
                 Text("""
                      Price today:
-                     \(con.estimatedPricedToday)
+                     \(item.estimatedPricedToday)
                     """)
-                Text("""
+                if(item.category == "Game & Watch"){
+                    Text("""
                      Initial Price:
-                     \(con.initialPrice)
+                     $\(item.initialPrice)
                     """)
+                }else{
+                    Text("""
+                     Initial Price:
+                     \(item.initialPrice)
+                    """)
+                }
                 Text("""
                      Ports:
-                     \(con.cables)
+                     \(item.cables)
                     """)
                 Text("""
                      Console Dimensions:
-                     \(con.dims)
+                     \(item.dims)
                     """)
-                if(con.isHandheld){
+                if(item.isHandheld){
                     Text("""
                      Screen Specs:
-                     \(con.screenSize)
+                     \(item.screenSize)
                     """)
                 }
                 Text("""
                      CPU:
-                     \(con.processor)
+                     \(item.processor)
                     """)
-                
-            }
+            }.navigationBarTitleDisplayMode(.inline)
+            
         }
     }
 }
-
 struct ConsoleDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ConsoleDetailView(con: ConsoleList.consoles.first!)
+        ConsoleDetailView(item: ConsoleList.consoles.first!)
     }
 }

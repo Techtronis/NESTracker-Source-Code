@@ -9,27 +9,47 @@ import SwiftUI
 
 struct ConsoleMenu: View {
     
-    var cons: [ConsoleDetails] = ConsoleList.consoles
+    @State var cons: [ConsoleDetails]
     
     var body: some View {
-        List(cons, id: \.id) { item in
-            NavigationLink(destination: ConsoleDetailView(con: item), label: {
-                HStack{
-                    Image(item.imgName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 60, height:60)
-                    
-                    Text(item.consoleName)
-                        .fontWeight(.semibold)
-                }
-            }).navigationTitle("FTNT-1")
+        NavigationStack{
+            List(cons, id: \.id) { item in
+                /*Button(action: {
+                    item.favorites.toggle()
+                    print("toggledfav")
+                }, label: {
+                    Text("setfav")
+                })*/
+                NavigationLink(destination: ConsoleDetailView(item: item), label: {
+                    HStack{
+                        Image(item.imgName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height:60)
+                        VStack(alignment: .leading){
+                            Text(item.consoleName)
+                                .fontWeight(.semibold)
+                                .font(.system(size: 17))
+                            Text("\(item.ReleaseDate) - \(item.Discontinuation)")
+                                .font(.system(size:15))
+                                .foregroundStyle(.gray)
+                        }
+                        if item.favorites {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                        }
+                        
+                        
+                    }
+                })
+            }.navigationTitle(cons.first?.category ?? "")
         }
     }
 }
 
+
 struct ConsoleMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ConsoleMenu()
+        ConsoleMenu(cons: ConsoleList.consoles)
     }
 }
