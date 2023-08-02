@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>160</string>
+					<key>EndingLineNumber</key>
+					<string>1027</string>
+					<key>StartingColumnNumber</key>
+					<string>8</string>
+					<key>StartingLineNumber</key>
+					<string>1027</string>
+					<key>Timestamp</key>
+					<string>712700799.203438</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>//Game &amp; Watch</string>
+				<key>leading</key>
+				<string>                       discontinued: true,
+                       isHandheld: true),
+        </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "GW01",
+                       consoleName: "Ball",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>23</string>
+					<key>EndingLineNumber</key>
+					<string>866</string>
+					<key>StartingColumnNumber</key>
+					<string>7</string>
+					<key>StartingLineNumber</key>
+					<string>866</string>
+					<key>Timestamp</key>
+					<string>712700773.568035</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> //Old Handhelds</string>
+				<key>leading</key>
+				<string>                       isHandheld: true),
+        
+       </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "GB_FAT",
+                       consoleName: "Original GameBoy",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>14</string>
+					<key>EndingLineNumber</key>
+					<string>702</string>
+					<key>StartingColumnNumber</key>
+					<string>7</string>
+					<key>StartingLineNumber</key>
+					<string>702</string>
+					<key>Timestamp</key>
+					<string>712700761.226375</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> //iQue</string>
+				<key>leading</key>
+				<string>                       discontinued: true,
+                       isHandheld: true),
+       </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "IQUEPLAYER",
+                       consoleName: "iQue Player",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>27</string>
+					<key>EndingLineNumber</key>
+					<string>471</string>
+					<key>StartingColumnNumber</key>
+					<string>7</string>
+					<key>StartingLineNumber</key>
+					<string>471</string>
+					<key>Timestamp</key>
+					<string>712700744.5375839</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> //Nintendo DS / 3DS</string>
+				<key>leading</key>
+				<string>                       discontinued: true,
+                       isHandheld: false),
+       </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "DS_PHAT",
+                       consoleName: "Original Nintendo DS",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>27</string>
+					<key>EndingLineNumber</key>
+					<string>246</string>
+					<key>StartingColumnNumber</key>
+					<string>7</string>
+					<key>StartingLineNumber</key>
+					<string>246</string>
+					<key>Timestamp</key>
+					<string>712700695.622269</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> //Old Home Consoles</string>
+				<key>leading</key>
+				<string>                       isHandheld: true),
+        
+       </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "FAMICOM",
+                       consoleName: "Famicom (Japan only)",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>15</string>
+					<key>EndingLineNumber</key>
+					<string>194</string>
+					<key>StartingColumnNumber</key>
+					<string>7</string>
+					<key>StartingLineNumber</key>
+					<string>194</string>
+					<key>Timestamp</key>
+					<string>712700705.6701241</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> //Other</string>
+				<key>leading</key>
+				<string>                       discontinued: true,
+                       isHandheld: false),
+       </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "NINPS",
+                       consoleName: "Nintendo Playstation",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>23</string>
+					<key>EndingLineNumber</key>
+					<string>118</string>
+					<key>StartingColumnNumber</key>
+					<string>8</string>
+					<key>StartingLineNumber</key>
+					<string>118</string>
+					<key>Timestamp</key>
+					<string>712700713.1525199</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>//Color TV Game</string>
+				<key>leading</key>
+				<string>                       discontinued: false,
+                       isHandheld: true),
+        </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "CTG6",
+                       consoleName: "Color TV Game 6 (Japan only)",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>26</string>
+					<key>EndingLineNumber</key>
+					<string>29</string>
+					<key>StartingColumnNumber</key>
+					<string>8</string>
+					<key>StartingLineNumber</key>
+					<string>29</string>
+					<key>Timestamp</key>
+					<string>712700719.769804</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>//Current Consoles</string>
+				<key>leading</key>
+				<string>    
+    static var consoles = [
+        </string>
+				<key>trailing</key>
+				<string>
+        ConsoleDetails(imgName: "NS_OG",
+                       consoleName: "Nintendo Switch",
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
