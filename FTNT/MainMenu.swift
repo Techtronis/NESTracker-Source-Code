@@ -112,11 +112,8 @@ struct MainMenu: View {
                                 }
                             }
                         }
-                        Section(header: Text("About me")){
-                            Text("""
-    Thank you for downloading my app <3
-    If you notice issues, errors or have any suggestions, please contact me at alexisjost20@gmail.com
-    """)
+                        Section(header: Text("About")){
+                            Text("If there are any issues with the app, please contact me at alexisjostdev@gmail.com. Please be aware that all the names mentioned are trademarked by Nintendo Co., Ltd.")
                         }
                     }
                 }.navigationTitle("NESTracker")

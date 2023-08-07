@@ -43,6 +43,8 @@ struct CurrentConsoles: View {
     }
 }
 
-#Preview {
-    CurrentConsoles(cons: ConsoleList.consoles)
+struct ConsoleCurrent_Previews: PreviewProvider {
+    static var previews: some View {
+        CurrentConsoles(cons: ConsoleList.consoles)
+    }
 }

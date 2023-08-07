@@ -17,26 +17,32 @@ struct ConsoleDetailView: View {
         VStack(alignment: .leading) {
             List{
                 HStack(){
-                    /*Button {
-                        item.favorites.toggle()
-                    } label: {
-                        Text("confav")
-                    }*/
-                    
-
                     Image(item.imgName)
                         .resizable()
                         .scaledToFit()
                         .frame(width:130, height:130)
                     VStack(alignment: .leading){
-                        
                         Text(item.consoleName)
                             .fontWeight(.semibold)
-                            .font(.system(size:23))
-                        Text(item.ReleaseDate)
-                            .font(.subheadline)
+                            .font(.system(size:21))
                     }
                 }
+                if item.jpnName != "" && item.category != "Other" || item.category != "iQue" {
+                    Text("""
+                         Original Name:
+                         \(item.jpnName)
+                        """)
+                } else if item.jpnName != "" {
+                    Text("""
+                         Japanese Name:
+                         \(item.jpnName)
+                        """)
+                }
+               
+                Text("""
+                     Release Date:
+                     \(item.ReleaseDate)
+                    """)
                 Text("""
                      Discontinued:
                      \(item.Discontinuation)
@@ -60,6 +66,11 @@ struct ConsoleDetailView: View {
                      Price today:
                      \(item.estimatedPricedToday)
                     """)
+                if(item.isRegionLocked){
+                    Text(" Region Locked")
+                } else {
+                    Text(" Not Region Locked")
+                }
                 if(item.category == "Game & Watch"){
                     Text("""
                      Initial Price:
@@ -71,24 +82,27 @@ struct ConsoleDetailView: View {
                      \(item.initialPrice)
                     """)
                 }
-                Text("""
+                Group {
+                    Text("""
                      Ports:
                      \(item.cables)
                     """)
-                Text("""
+                    Text("""
                      Console Dimensions:
                      \(item.dims)
                     """)
-                if(item.isHandheld){
-                    Text("""
+                    if(item.isHandheld){
+                        Text("""
                      Screen Specs:
                      \(item.screenSize)
                     """)
-                }
-                Text("""
+                    }
+                    
+                    Text("""
                      CPU:
                      \(item.processor)
                     """)
+                }
             }.navigationBarTitleDisplayMode(.inline)
             
         }

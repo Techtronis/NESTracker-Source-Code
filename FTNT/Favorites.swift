@@ -39,6 +39,8 @@ struct Favorites: View {
     }
 }
 
-#Preview {
-    Favorites(cons: ConsoleList.consoles)
+struct ConsoleFav_Previews: PreviewProvider {
+    static var previews: some View {
+        Favorites(cons: ConsoleList.consoles)
+    }
 }
