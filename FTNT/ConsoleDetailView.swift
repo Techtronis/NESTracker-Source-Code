@@ -27,14 +27,19 @@ struct ConsoleDetailView: View {
                             .font(.system(size:21))
                     }
                 }
-                if item.jpnName != "" && item.category != "Other" || item.category != "iQue" {
+                if item.jpnName != "" && item.category == "Other"{
                     Text("""
                          Original Name:
                          \(item.jpnName)
                         """)
-                } else if item.jpnName != "" {
+                } else if item.jpnName != "" && item.category != "iQue" {
                     Text("""
                          Japanese Name:
+                         \(item.jpnName)
+                        """)
+                } else if item.category == "iQue" {
+                    Text("""
+                         Chinese Name:
                          \(item.jpnName)
                         """)
                 }

@@ -57,14 +57,6 @@ struct MainMenu: View {
                                         .fontWeight(.medium)
                                 }
                             })
-                            /*NavigationLink(destination: Favorites(cons: ConsoleList.consoles), label: {
-                             HStack{
-                             Image(systemName: "folder")
-                             .foregroundColor(.red)
-                             Text("Favorites")
-                             .fontWeight(.medium)
-                             }
-                             })*/
                             ForEach(categories, id:\.key) { category in
                                 if (category.key == "Other" || category.key == "Current Consoles"){
                                     NavigationLink(destination: ConsoleMenu(cons: category.value), label: {

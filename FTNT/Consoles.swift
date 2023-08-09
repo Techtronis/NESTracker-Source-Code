@@ -212,6 +212,7 @@ struct ConsoleList {
                        isRegionLocked: true),
         //Other
         ConsoleDetails(imgName: "NINPS",
+                       jpnName: "ニンテンドプレイステーション",
                        consoleName: "Nintendo Playstation",
                        mostSoldGame: "No games released",
                        initialPrice: "No initial Price",
@@ -265,8 +266,7 @@ struct ConsoleList {
                        discontinued: true,
                        isHandheld: true,
                        isRegionLocked: false),
-        ConsoleDetails(imgName: "iquewii",
-                       jpnName: "",
+        ConsoleDetails(imgName: "WII",
                        consoleName: "iQue Wii",
                        mostSoldGame: "-",
                        initialPrice: "-",
@@ -286,7 +286,7 @@ struct ConsoleList {
                        discontinued: true,
                        isHandheld: true,
                        isRegionLocked: true),
-        ConsoleDetails(imgName: "chinaswitch",
+        ConsoleDetails(imgName: "chnswitch",
                        jpnName: "腾讯Nintendo Switch",
                        consoleName: "Tencent Nintendo Switch",
                        mostSoldGame: "Mario Kart 8 Deluxe",
@@ -340,11 +340,13 @@ struct ConsoleList {
                        isHandheld: false,
                        isRegionLocked: true),
         ConsoleDetails(imgName: "NES",
-                       jpnName: "Nintendo Entertainement System",
                        consoleName: "NES",
                        mostSoldGame: "Super Mario Bros",
                        initialPrice: "$179.99",
-                       ReleaseDate: "Oct 18, 1985",
+                       ReleaseDate: """
+                       USA: October 18th, 1985
+                        EU: September 1st, 1986
+                       """,
                        Discontinuation: "1991",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-100 used depending on condition",
@@ -382,8 +384,8 @@ struct ConsoleList {
                        isHandheld: false,
                        isRegionLocked: true),
         ConsoleDetails(imgName: "US_SNES",
-                       jpnName: "Super Nintendo Entertainement System",
-                       consoleName: "SNES (North America Only)",
+                       jpnName: "",
+                       consoleName: "Super NES (North America Only)",
                        mostSoldGame: "Super Mario World",
                        initialPrice: "$199.99",
                        ReleaseDate: "Sept 9, 1991",
@@ -403,8 +405,8 @@ struct ConsoleList {
                        isHandheld: false,
                        isRegionLocked: true),
         ConsoleDetails(imgName: "EU_SNES",
-                       jpnName: "Super Nintendo Entertainement System",
-                       consoleName: "SNES (EU Version)",
+                       jpnName: "",
+                       consoleName: "Super NES (EU Version)",
                        mostSoldGame: "Super Mario World",
                        initialPrice: "$199.99",
                        ReleaseDate: "Sept 9, 1991",
@@ -428,7 +430,10 @@ struct ConsoleList {
                        consoleName: "NES Top Loader",
                        mostSoldGame: "Super Mario Bros",
                        initialPrice: "$49.99",
-                       ReleaseDate: "Oct 15, 1993",
+                       ReleaseDate: """
+                       US: October 11th, 1993
+                        JPN: October 21st, 1993
+                       """,
                        Discontinuation: "2003",
                        category: "Home Consoles",
                        estimatedPricedToday: "$100-250 used depending on condition",
@@ -457,9 +462,9 @@ struct ConsoleList {
                        processor: "NEC VR4300",
                        modelNumber: "NUS-001",
                        dims: """
-                       W: 10.23\"
-                        H: 2.87\"
-                        D: 7.48\"
+                       US: June 23rd, 1996
+                        JPN: September 26th, 1996
+                        PAL: March 1st, 1997
                        """,
                        favorites: false,
                        discontinued: true,
@@ -470,7 +475,11 @@ struct ConsoleList {
                        consoleName: "Gamecube",
                        mostSoldGame: "Super Smash Bros Melee",
                        initialPrice: "$199",
-                       ReleaseDate: "Sept 14, 2001",
+                       ReleaseDate: """
+                       US: November 18th, 2001
+                        JPN: September 14th, 2001
+                        PAL: May 3rd, 2002
+                       """,
                        Discontinuation: "2007",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-130 used depending on condition",
@@ -491,7 +500,11 @@ struct ConsoleList {
                        consoleName: "Wii (Gamecube)",
                        mostSoldGame: "Wii Sports",
                        initialPrice: "$249.99",
-                       ReleaseDate: "Nov 19, 2006",
+                       ReleaseDate: """
+                       US: November 19th, 2006
+                        JPN: December 2nd, 2006
+                        PAL: December 8th, 2006
+                       """,
                        Discontinuation: "2013",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-100 used depending on condition",
@@ -508,12 +521,15 @@ struct ConsoleList {
                        isHandheld: false,
                        isRegionLocked: true),
         ConsoleDetails(imgName: "WIING",
-                       jpnName: "ウイー",
                        consoleName: "Wii Family Edition",
                        mostSoldGame: "Wii Sports",
                        initialPrice: "$149.99",
-                       ReleaseDate: "Oct 23, 2011",
-                       Discontinuation: "2014",
+                       ReleaseDate: """
+                       US: October 23rd, 2011
+                        EU: November 4th, 2011
+                        AU: November 11th, 2011
+                       """,
+                       Discontinuation: "2013",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-100 used depending on condition",
                        cables: "AV Multi Out, AC adapter",
@@ -533,7 +549,10 @@ struct ConsoleList {
                        consoleName: "Wii Mini",
                        mostSoldGame: "Wii Sports",
                        initialPrice: "$99.99",
-                       ReleaseDate: "Nov 17, 2013",
+                       ReleaseDate: """
+                       US: November 17th, 2013
+                        EU: March 15th, 2013
+                       """,
                        Discontinuation: "2017",
                        category: "Home Consoles",
                        estimatedPricedToday: "$40-70 used depending on condition",
@@ -549,7 +568,11 @@ struct ConsoleList {
                        consoleName: "Wii U",
                        mostSoldGame: "Mario Kart 8",
                        initialPrice: "$299.99",
-                       ReleaseDate: "Nov 18, 2012",
+                       ReleaseDate: """
+                       US: November 18th, 2012
+                        JPN: December 8th, 2012
+                        EU: November 30th, 2012
+                       """,
                        Discontinuation: "2017",
                        category: "Home Consoles",
                        estimatedPricedToday: "$50-150 used depending on condition",
@@ -571,7 +594,11 @@ struct ConsoleList {
                        consoleName: "Original Nintendo DS",
                        mostSoldGame: "New Super Mario Bros",
                        initialPrice: "$149.99",
-                       ReleaseDate: "Nov 21, 2004",
+                       ReleaseDate: """
+                       US: November 21st, 2004
+                        JPN: December 2nd, 2003
+                        EU: March 11th, 2005
+                       """,
                        Discontinuation: "2009",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$20-60 used depending on condition",
@@ -596,7 +623,11 @@ struct ConsoleList {
                        consoleName: "Nintendo DS Lite",
                        mostSoldGame: "New Super Mario Bros",
                        initialPrice: "$129.99",
-                       ReleaseDate: "Mar 2, 2006",
+                       ReleaseDate: """
+                       US: June 11th, 2006
+                        JPN: March 2nd, 2006
+                        EU: June 23rd, 2006
+                       """,
                        Discontinuation: "2011",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$50-80 used depending on condition",
@@ -622,7 +653,11 @@ struct ConsoleList {
                        mostSoldGame: "New Super Mario Bros",
                        initialPrice: "$169.99",
                        ReleaseDate: "Nov 1, 2008",
-                       Discontinuation: "2014",
+                       Discontinuation: """
+                       US: April 5th, 2009
+                        JPN: November 1st, 2008
+                        EU: April 3rd, 2009
+                       """,
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$30-80 used depending on condition",
                        cables: "AC Adapter",
@@ -646,7 +681,11 @@ struct ConsoleList {
                        consoleName: "Nintendo DSi XL",
                        mostSoldGame: "New Super Mario Bros",
                        initialPrice: "$169.99",
-                       ReleaseDate: "Nov 1, 2008",
+                       ReleaseDate:  """
+                       US: March 28th, 2010
+                        JPN: November 21st, 2009
+                        EU: March 5th, 2010
+                       """,
                        Discontinuation: "2010",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$40-90 used depending on condition",
@@ -671,7 +710,11 @@ struct ConsoleList {
                        consoleName: "Nintendo 3DS",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$249.99",
-                       ReleaseDate: "Feb 26, 2011",
+                       ReleaseDate:  """
+                       US: March 27th, 2011
+                        JPN: February 26th, 2011
+                        EU: March 25th, 2011
+                       """,
                        Discontinuation: "2015",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$50-100 used depending on condition",
@@ -696,7 +739,11 @@ struct ConsoleList {
                        consoleName: "Nintendo 3DS XL",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$199.99",
-                       ReleaseDate: "August 19, 2012",
+                       ReleaseDate:  """
+                       US: August 19th, 2012
+                        JPN: July 28th, 2012
+                        EU: July 28th, 2012
+                       """,
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$80-120 used depending on condition",
@@ -721,7 +768,11 @@ struct ConsoleList {
                        consoleName: "Nintendo 2DS",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$129.99",
-                       ReleaseDate: "Oct 12, 2013",
+                       ReleaseDate:  """
+                       US: October 12th, 2013
+                        JPN: February 27th, 2016
+                        EU: October 12th, 2013
+                       """,
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$30-100 used depending on condition",
@@ -746,7 +797,11 @@ struct ConsoleList {
                        consoleName: "New Nintendo 3DS",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$219.99",
-                       ReleaseDate: "Feb 13, 2015",
+                       ReleaseDate:  """
+                       US: September 25th, 2015
+                        JPN: October 11th, 2014
+                        EU: February 13th, 2015
+                       """,
                        Discontinuation: "2017",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$80-150 used depending on condition",
@@ -771,7 +826,11 @@ struct ConsoleList {
                        consoleName: "New Nintendo 3DS XL",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$199.99",
-                       ReleaseDate: "Feb 13, 2015",
+                       ReleaseDate:  """
+                       US: February 13th, 2015
+                        JPN: October 11th, 2014
+                        EU: February 13th, 2015
+                       """,
                        Discontinuation: "2019",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$80-150 used depending on condition",
@@ -796,7 +855,11 @@ struct ConsoleList {
                        consoleName: "New Nintendo 2DS XL",
                        mostSoldGame: "Mario Kart 7",
                        initialPrice: "$149.99",
-                       ReleaseDate: "Jul 28, 2017",
+                       ReleaseDate:  """
+                       US: July 28th, 2017
+                        JPN: July 13th, 2017
+                        EU: July 28th, 2017
+                       """,
                        Discontinuation: "2020",
                        category: "Nintendo DS / 3DS",
                        estimatedPricedToday: "$100-200 used depending on condition",
@@ -1001,7 +1064,11 @@ struct ConsoleList {
                        consoleName: "Original GameBoy",
                        mostSoldGame: "Tetris",
                        initialPrice: "$89.99",
-                       ReleaseDate: "Apr 21, 1989",
+                       ReleaseDate:  """
+                       US: July 31st, 1989
+                        JPN: April 21st, 1989
+                        EU: September 28th, 1990
+                       """,
                        Discontinuation: "2001",
                        category: "Game Boy",
                        estimatedPricedToday: "$50-130 used depending on condition",
@@ -1023,7 +1090,11 @@ struct ConsoleList {
                        consoleName: "Virtual Boy",
                        mostSoldGame: "Wario Land",
                        initialPrice: "$179.95",
-                       ReleaseDate: "Aug 21, 1995",
+                       ReleaseDate:  """
+                       US: August 14th, 1995
+                        JPN: July 21st, 1995
+                        EU: -
+                       """,
                        Discontinuation: "1996",
                        category: "Game Boy",
                        estimatedPricedToday: "$60-250 used depending on condition",
@@ -1045,7 +1116,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Pocket",
                        mostSoldGame: "Tetris",
                        initialPrice: "$69.99",
-                       ReleaseDate: "Jul 21, 1996",
+                       ReleaseDate:  """
+                       US: September 3rd, 1996
+                        JPN: July 21st, 1996
+                        EU: -
+                       """,
                        Discontinuation: "2003",
                        category: "Game Boy",
                        estimatedPricedToday: "$50-80 used depending on condition",
@@ -1066,7 +1141,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Light",
                        mostSoldGame: "Tetris",
                        initialPrice: "$89.99",
-                       ReleaseDate: "Apr 14, 1998",
+                       ReleaseDate:  """
+                       US: -
+                        JPN: April 14th, 1998
+                        EU: -
+                       """,
                        Discontinuation: "2003",
                        category: "Game Boy",
                        estimatedPricedToday: "$90-140 used depending on condition",
@@ -1088,7 +1167,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Color",
                        mostSoldGame: "Pokémon Red/Blue/Yellow/Green",
                        initialPrice: "$69.99",
-                       ReleaseDate: "Oct 21, 1998",
+                       ReleaseDate:  """
+                       US: November 18th, 1998
+                        JPN: October 21st, 1998
+                        EU: November 23rd, 1998
+                       """,
                        Discontinuation: "2003",
                        category: "Game Boy",
                        estimatedPricedToday: "$50-130 used depending on condition",
@@ -1110,7 +1193,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Advance",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
                        initialPrice: "$99.99",
-                       ReleaseDate: "Mar 21, 2001",
+                       ReleaseDate:  """
+                       US: June 11th, 2001
+                        JPN: March 21st, 2001
+                        EU: June 22nd, 2001
+                       """,
                        Discontinuation: "2010",
                        category: "Game Boy",
                        estimatedPricedToday: "$40-100 used depending on condition",
@@ -1131,7 +1218,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Advance SP",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
                        initialPrice: "$99.99",
-                       ReleaseDate: "Feb 14, 2003",
+                       ReleaseDate:  """
+                       US: March 23rd, 2003
+                        JPN: February 14th, 2003
+                        EU: March 28th, 2003
+                       """,
                        Discontinuation: "2008",
                        category: "Game Boy",
                        estimatedPricedToday: "$70-130 used depending on condition",
@@ -1153,7 +1244,11 @@ struct ConsoleList {
                        consoleName: "GameBoy Micro",
                        mostSoldGame: "Pokémon Ruby/Sapphire",
                        initialPrice: "$99.99",
-                       ReleaseDate: "Feb 14, 2003",
+                       ReleaseDate:  """
+                       US: September 19th, 2005
+                        JPN: September 13th, 2005
+                        EU: November 4th, 2005
+                       """,
                        Discontinuation: "2008",
                        category: "Game Boy",
                        estimatedPricedToday: "$80-200 used depending on condition",

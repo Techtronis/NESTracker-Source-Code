@@ -14,12 +14,6 @@ struct ConsoleMenu: View {
     var body: some View {
         NavigationStack{
             List(cons, id: \.id) { item in
-                /*Button(action: {
-                    item.favorites.toggle()
-                    print("toggledfav")
-                }, label: {
-                    Text("setfav")
-                })*/
                 NavigationLink(destination: ConsoleDetailView(item: item), label: {
                     HStack{
                         Image(item.imgName)
@@ -30,9 +24,6 @@ struct ConsoleMenu: View {
                             Text(item.consoleName)
                                 .fontWeight(.semibold)
                                 .font(.system(size: 17))
-                            Text("\(item.ReleaseDate) - \(item.Discontinuation)")
-                                .font(.system(size:15))
-                                .foregroundStyle(.gray)
                         }
                         if item.favorites {
                             Image(systemName: "star.fill")
