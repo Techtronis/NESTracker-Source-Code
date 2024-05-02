@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>160</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>1027</string>
+					<string>1077</string>
 					<key>StartingColumnNumber</key>
-					<string>8</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>1027</string>
+					<string>1076</string>
 					<key>Timestamp</key>
-					<string>712700799.203438</string>
+					<string>736164941.942969</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,15 +34,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>//Game &amp; Watch</string>
+				<string>                       isHandheld: true,
+</string>
 				<key>leading</key>
-				<string>                       discontinued: true,
-                       isHandheld: true),
-        </string>
+				<string>                       favorites: false,
+                       discontinued: true,
+</string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "GW01",
-                       consoleName: "Ball",
+				<string>                       isRegionLocked: false),
+        ConsoleDetails(imgName: "IQUEDS",
+                       jpnName: "",
 </string>
 			</dict>
 			<key>type</key>
@@ -54,15 +55,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>23</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>866</string>
+					<string>916</string>
 					<key>StartingColumnNumber</key>
-					<string>7</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>866</string>
+					<string>915</string>
 					<key>Timestamp</key>
-					<string>712700773.568035</string>
+					<string>736164941.942982</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -78,15 +79,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string> //Old Handhelds</string>
+				<string>                        JPN: October 11th, 2014
+</string>
 				<key>leading</key>
-				<string>                       isHandheld: true),
-        
-       </string>
+				<string>                       ReleaseDate:  """
+                       US: September 25th, 2015
+</string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "GB_FAT",
-                       consoleName: "Original GameBoy",
+				<string>                        EU: February 13th, 2015
+                       """,
+                       Discontinuation: "2017",
 </string>
 			</dict>
 			<key>type</key>
@@ -98,15 +100,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>14</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>702</string>
+					<string>752</string>
 					<key>StartingColumnNumber</key>
-					<string>7</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>702</string>
+					<string>751</string>
 					<key>Timestamp</key>
-					<string>712700761.226375</string>
+					<string>736164941.94294</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -122,15 +124,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string> //iQue</string>
+				<string>                        Bottom: 3 inch resistive touch screen
+</string>
 				<key>leading</key>
-				<string>                       discontinued: true,
-                       isHandheld: true),
-       </string>
+				<string>                       screenSize: """
+                       Top: 3 inch display
+</string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "IQUEPLAYER",
-                       consoleName: "iQue Player",
+				<string>                       """,
+                       modelNumber: "USG-001",
+                       dims: """
 </string>
 			</dict>
 			<key>type</key>
@@ -142,15 +145,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>27</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
+					<string>496</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
 					<string>471</string>
-					<key>StartingColumnNumber</key>
-					<string>7</string>
-					<key>StartingLineNumber</key>
-					<string>471</string>
 					<key>Timestamp</key>
-					<string>712700744.5375839</string>
+					<string>729878965.11331</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -166,15 +169,40 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string> //Nintendo DS / 3DS</string>
+				<string>                       isRegionLocked: true),
+        ConsoleDetails(imgName: "topsnes",
+                       jpnName: "スーパーファミコン ジュニア",
+                       consoleName: "New-Style Super NES",
+                       mostSoldGame: "Super Mario World",
+                       initialPrice: "$99.95",
+                       ReleaseDate: """
+                       US: October 1997
+                        JPN: March 7th, 1998
+                       """,
+                       Discontinuation: "1999",
+                       category: "Home Consoles",
+                       estimatedPricedToday: "$85-250 used depending on condition",
+                       cables: "AV cables, AC Adapter",
+                       processor: "Ricoh 2A03",
+                       modelNumber: "SNS-101",
+                       dims: """
+                       W: 14\"
+                        H: 22\"
+                        D: 6\"
+                       """,
+                       favorites: false,
+                       discontinued: true,
+                       isHandheld: false,
+                       isRegionLocked: true),
+</string>
 				<key>leading</key>
 				<string>                       discontinued: true,
-                       isHandheld: false),
-       </string>
+                       isHandheld: false,
+</string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "DS_PHAT",
-                       consoleName: "Original Nintendo DS",
+				<string>        ConsoleDetails(imgName: "GAMECUBE",
+                       jpnName: "ニンテンドーゲームキューブ",
+                       consoleName: "Gamecube",
 </string>
 			</dict>
 			<key>type</key>
@@ -210,15 +238,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string> //Old Home Consoles</string>
+				<string>                favo</string>
 				<key>leading</key>
-				<string>                       isHandheld: true),
-        
+				<string>                       modelNumber: "SL-GC10",
+                       dims: "Unknown",
        </string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "FAMICOM",
-                       consoleName: "Famicom (Japan only)",
+				<string>rites: false,
+                       discontinued: true,
+                       isHandheld: false,
 </string>
 			</dict>
 			<key>type</key>
@@ -254,15 +282,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string> //Other</string>
+				<string>        </string>
 				<key>leading</key>
 				<string>                       discontinued: true,
-                       isHandheld: false),
+                       isHandheld: false,
        </string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "NINPS",
-                       consoleName: "Nintendo Playstation",
+				<string>        isRegionLocked: true),
+        ConsoleDetails(imgName: "COMPTG",
+                       jpnName: "コンピュータ TV ゲーム",
 </string>
 			</dict>
 			<key>type</key>
@@ -298,15 +326,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>//Color TV Game</string>
+				<string>               </string>
 				<key>leading</key>
-				<string>                       discontinued: false,
-                       isHandheld: true),
+				<string>                       modelNumber: "HEG-001",
+                       dims: """
         </string>
 				<key>trailing</key>
-				<string>
-        ConsoleDetails(imgName: "CTG6",
-                       consoleName: "Color TV Game 6 (Japan only)",
+				<string>W: 9.5\"
+                        H: 4\"
+                        D: 0.55\"
 </string>
 			</dict>
 			<key>type</key>
@@ -342,15 +370,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>//Current Consoles</string>
+				<string></string>
 				<key>leading</key>
-				<string>    
-    static var consoles = [
-        </string>
+				<string>    //The consoles list but I'll only put one to save space
+    static let categories = Dictionary(grouping: consoles, by: {$0.category})
+    </string>
 				<key>trailing</key>
 				<string>
-        ConsoleDetails(imgName: "NS_OG",
-                       consoleName: "Nintendo Switch",
+    static var consoles = [
+        //Current Consoles
 </string>
 			</dict>
 			<key>type</key>
