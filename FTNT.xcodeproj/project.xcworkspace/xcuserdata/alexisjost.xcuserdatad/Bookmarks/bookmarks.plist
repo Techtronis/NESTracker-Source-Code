@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>1077</string>
+					<string>1120</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>1076</string>
+					<string>1119</string>
 					<key>Timestamp</key>
-					<string>736164941.942969</string>
+					<string>739777400.309242</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,16 +34,106 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>                       isHandheld: true,
+				<string>                        H: 2.95\"
 </string>
 				<key>leading</key>
+				<string>                       dims: """
+                       W: 5.39\"
+</string>
+				<key>trailing</key>
+				<string>                        D: 0.74\"
+                       """,
+                       favorites: false,
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>959</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>958</string>
+					<key>Timestamp</key>
+					<string>739777400.309202</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                       processor: "4x VFPv2 Co-Processor",
+</string>
+				<key>leading</key>
+				<string>                       estimatedPricedToday: "$100-200 used depending on condition",
+                       cables: "AC Adapter",
+</string>
+				<key>trailing</key>
+				<string>                       screenSize: """
+                       Top: 4.88 inch display
+                        Bottom: 4.18 inch resistive touch screen
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>795</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>794</string>
+					<key>Timestamp</key>
+					<string>739777400.3092541</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FTNT/Consoles.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                       """,
+</string>
+				<key>leading</key>
+				<string>                        H: 3.59\"
+                        D: 0.83\"
+</string>
+				<key>trailing</key>
 				<string>                       favorites: false,
                        discontinued: true,
-</string>
-				<key>trailing</key>
-				<string>                       isRegionLocked: false),
-        ConsoleDetails(imgName: "IQUEDS",
-                       jpnName: "",
+                       isHandheld: true,
 </string>
 			</dict>
 			<key>type</key>
@@ -57,103 +147,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>916</string>
+					<string>564</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>915</string>
+					<string>563</string>
 					<key>Timestamp</key>
-					<string>736164941.942982</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>FTNT/Consoles.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                        JPN: October 11th, 2014
-</string>
-				<key>leading</key>
-				<string>                       ReleaseDate:  """
-                       US: September 25th, 2015
-</string>
-				<key>trailing</key>
-				<string>                        EU: February 13th, 2015
-                       """,
-                       Discontinuation: "2017",
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>752</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>751</string>
-					<key>Timestamp</key>
-					<string>736164941.94294</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>FTNT/Consoles.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                        Bottom: 3 inch resistive touch screen
-</string>
-				<key>leading</key>
-				<string>                       screenSize: """
-                       Top: 3 inch display
-</string>
-				<key>trailing</key>
-				<string>                       """,
-                       modelNumber: "USG-001",
-                       dims: """
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>496</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>471</string>
-					<key>Timestamp</key>
-					<string>729878965.11331</string>
+					<string>739777400.30923</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -170,30 +170,6 @@
 			<dict>
 				<key>focused</key>
 				<string>                       isRegionLocked: true),
-        ConsoleDetails(imgName: "topsnes",
-                       jpnName: "スーパーファミコン ジュニア",
-                       consoleName: "New-Style Super NES",
-                       mostSoldGame: "Super Mario World",
-                       initialPrice: "$99.95",
-                       ReleaseDate: """
-                       US: October 1997
-                        JPN: March 7th, 1998
-                       """,
-                       Discontinuation: "1999",
-                       category: "Home Consoles",
-                       estimatedPricedToday: "$85-250 used depending on condition",
-                       cables: "AV cables, AC Adapter",
-                       processor: "Ricoh 2A03",
-                       modelNumber: "SNS-101",
-                       dims: """
-                       W: 14\"
-                        H: 22\"
-                        D: 6\"
-                       """,
-                       favorites: false,
-                       discontinued: true,
-                       isHandheld: false,
-                       isRegionLocked: true),
 </string>
 				<key>leading</key>
 				<string>                       discontinued: true,
@@ -214,15 +190,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>27</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>246</string>
+					<string>339</string>
 					<key>StartingColumnNumber</key>
-					<string>7</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>246</string>
+					<string>338</string>
 					<key>Timestamp</key>
-					<string>712700695.622269</string>
+					<string>739777400.30917</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -238,15 +214,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>                favo</string>
+				<string>                       favorites: false,
+</string>
 				<key>leading</key>
 				<string>                       modelNumber: "SL-GC10",
                        dims: "Unknown",
-       </string>
+</string>
 				<key>trailing</key>
-				<string>rites: false,
-                       discontinued: true,
+				<string>                       discontinued: true,
                        isHandheld: false,
+                       isRegionLocked: true),
 </string>
 			</dict>
 			<key>type</key>
@@ -258,15 +235,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>15</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>194</string>
+					<string>287</string>
 					<key>StartingColumnNumber</key>
-					<string>7</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>194</string>
+					<string>286</string>
 					<key>Timestamp</key>
-					<string>712700705.6701241</string>
+					<string>739777400.309216</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -282,15 +259,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>        </string>
+				<string>                       isRegionLocked: true),
+</string>
 				<key>leading</key>
 				<string>                       discontinued: true,
                        isHandheld: false,
-       </string>
+</string>
 				<key>trailing</key>
-				<string>        isRegionLocked: true),
-        ConsoleDetails(imgName: "COMPTG",
+				<string>        ConsoleDetails(imgName: "COMPTG",
                        jpnName: "コンピュータ TV ゲーム",
+                       consoleName: "Computer TV Game (Japan only)",
 </string>
 			</dict>
 			<key>type</key>
@@ -346,15 +324,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>26</string>
+					<string>4</string>
 					<key>EndingLineNumber</key>
 					<string>29</string>
 					<key>StartingColumnNumber</key>
-					<string>8</string>
+					<string>4</string>
 					<key>StartingLineNumber</key>
 					<string>29</string>
 					<key>Timestamp</key>
-					<string>712700719.769804</string>
+					<string>739774400.279652</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
